@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+<div style="background-color:yellow">
+<p>Click the button to change the background color of this paragraph.</p>
+<button>Click me!</button>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		$("div").on( "click", "button", function( event ) {
+  		$(event.delegateTarget ).css( "background-color", "green");
+	});
+	});
+</script>
+
+</body>
+</html>
